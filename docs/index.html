@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Invoice Exchange Rate Reference Data</title>
+    <meta name="description" content="Reference exchange-rate links for invoice dates, reports, spreadsheets, CSV exports, and historical FX API workflows.">
+    <style>
+      body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 0; color: #172026; background: #f7f8f4; }
+      main { max-width: 880px; margin: 0 auto; padding: 48px 20px 64px; }
+      h1 { font-size: 34px; line-height: 1.1; margin: 0 0 12px; }
+      h2 { margin-top: 32px; }
+      p, li { font-size: 17px; line-height: 1.65; }
+      a { color: #005f73; font-weight: 650; }
+      .panel { border: 1px solid #ccd6cf; background: #fff; border-radius: 8px; padding: 18px; margin: 18px 0; }
+      code, pre { background: #eef2ef; border-radius: 6px; }
+      pre { overflow-x: auto; padding: 14px; }
+      .muted { color: #52605c; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="muted">FXpeek reference workflow</p>
+      <h1>Invoice Exchange Rate Reference Data</h1>
+      <p>Use these FXpeek links when you need a historical reference exchange rate for invoices, receipts, ecommerce orders, reimbursements, or month-end spreadsheet reports.</p>
+      <div class="panel">
+        <ul>
+          <li><a href="https://fxpeek.com/en/answers/exchange-rate-by-date?utm_source=github_pages&utm_medium=site&utm_campaign=fxpeek_invoice_exchange_rate&utm_content=exchange_rate_by_date">Exchange rate by date for invoices and reports</a></li>
+          <li><a href="https://fxpeek.com/en/api?utm_source=github_pages&utm_medium=site&utm_campaign=fxpeek_invoice_exchange_rate&utm_content=api_csv">Historical exchange-rate API and CSV docs</a></li>
+          <li><a href="https://fxpeek.com/en/answers/excel-spreadsheet-historical-rates?utm_source=github_pages&utm_medium=site&utm_campaign=fxpeek_invoice_exchange_rate&utm_content=spreadsheet_answer_hub">Excel and Google Sheets workflow</a></li>
+          <li><a href="https://fxpeek.com/en/reports/2026-historical-fx-reference?utm_source=github_pages&utm_medium=site&utm_campaign=fxpeek_invoice_exchange_rate&utm_content=reference_report">Historical FX reference report</a></li>
+        </ul>
+      </div>
+      <h2>Example Row</h2>
+      <pre><code>invoice_id,invoice_date,from_currency,to_currency,amount,reference_rate,converted_amount
+INV-1001,2026-06-15,USD,IDR,125.00,17809.00,2226125.00</code></pre>
+      <h2>API Check</h2>
+      <pre><code>curl "https://fxpeek.com/api/rates?from=USD&amp;to=IDR"</code></pre>
+      <p class="muted">Reference data only. Not a broker quote, payment quote, trading signal, tax advice, or accounting advice.</p>
+    </main>
+  </body>
+</html>
